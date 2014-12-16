@@ -1,0 +1,181 @@
+src/yuseok/rxcycleappsandbox/Main.java:18:	Avoid short class names like Main
+src/yuseok/rxcycleappsandbox/Main.java:18:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/Main.java:18:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/Main.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/Main.java:20:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/Main.java:20:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/Main.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/Main.java:21:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/Main.java:24:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/Main.java:24:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/Main.java:24:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/Main.java:33:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'l_position' is not final.
+src/yuseok/rxcycleappsandbox/Main.java:33:	Parameter 'l_position' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/Main.java:33:	Parameter 'parent' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/Main.java:33:	Parameter 'position' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/Main.java:33:	Parameter 'view' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/Main.java:33:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/Main.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:9:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:9:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:11:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:11:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:11:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:12:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:12:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:12:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:16:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:16:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:16:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:20:	Avoid instantiating new objects inside loops
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:25:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:25:	super should be called at the start of the method
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:26:	The String literal "async" appears 7 times in this file; the first occurrence is on line 26
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:31:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:31:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:38:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:38:	super should be called at the start of the method
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:44:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:44:	super should be called at the start of the method
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:50:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:60:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:66:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:71:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:71:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:74:	Parameter 'params' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:74:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:77:	Do not add empty strings
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:78:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:78:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:81:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:85:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/AsyncTaskTest.java:91:	Avoid printStackTrace(); use a logger call instead.
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:12:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:12:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:14:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:14:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:17:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:17:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:17:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:20:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:20:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:20:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:25:	Parameter 'arg0' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/FullGoogleMapUsage.java:25:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/GraphTest.java:7:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/GraphTest.java:7:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/GraphTest.java:10:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/GraphTest.java:10:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/GraphTest.java:10:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:15:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:15:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:17:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:17:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:18:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:18:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:19:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:19:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:20:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:20:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:20:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:21:	Avoid using redundant field initializer for 'isThreadRun'
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:21:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:21:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:24:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:24:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:24:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:39:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:39:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:39:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:41:	Local variable 'company' could be declared final
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:42:	Local variable 'home' could be declared final
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:57:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:57:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:60:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:65:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:68:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:70:	Local variable 'local' could be declared final
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:70:	Useless parentheses.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:70:	Useless parentheses.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:71:	Do not add empty strings
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:71:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:71:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:77:	Avoid unnecessary comparisons in boolean expressions
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:82:	Avoid printStackTrace(); use a logger call instead.
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:82:	Potential violation of Law of Demeter (object not created locally)
+src/yuseok/rxcycleappsandbox/activities/RunOnUIThreadTest.java:94:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:12:	Avoid unused imports such as 'android.widget.Toast'
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:14:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:14:	This class has too many methods, consider refactoring it.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:14:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:16:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:16:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:17:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:17:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:18:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:18:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:20:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:20:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:21:	Use explicit scoping instead of the default package private level
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:28:	Private field 'onclick' could be made final; it is only initialized in the declaration or constructor.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:28:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:31:	Avoid variables with short names like v
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:31:	Parameter 'v' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:31:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:33:	A switch with less than three branches is inefficient, use a if statement instead.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:33:	Switch statements should have a default label
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:47:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:47:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:47:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:51:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:52:	Potential violation of Law of Demeter (method chain calls)
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:69:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:69:	Private field 'musicRunnable' could be made final; it is only initialized in the declaration or constructor.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:69:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:69:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:69:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:72:	Document empty method
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:72:	publicMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	Private field 'musicThread' could be made final; it is only initialized in the declaration or constructor.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	To be compliant to J2EE, a webapp should not use any thread.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:76:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:77:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:77:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:77:	Private field 'musicAsync' could be made final; it is only initialized in the declaration or constructor.
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:77:	fieldCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:79:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:79:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:82:	Overriding method merely calls super
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:82:	Overriding method merely calls super
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:82:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:88:	Parameter 'params' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:88:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:94:	Overriding method merely calls super
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:94:	Overriding method merely calls super
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:94:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:102:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:112:	protectedMethodCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/SoundFXTest.java:112:	super should be called at the start of the method
+src/yuseok/rxcycleappsandbox/activities/ThreadTest.java:7:	Each class should declare at least one constructor
+src/yuseok/rxcycleappsandbox/activities/ThreadTest.java:7:	headerCommentRequirement Required
+src/yuseok/rxcycleappsandbox/activities/ThreadTest.java:10:	Avoid excessively long variable names like savedInstanceState
+src/yuseok/rxcycleappsandbox/activities/ThreadTest.java:10:	Parameter 'savedInstanceState' is not assigned and could be declared final
+src/yuseok/rxcycleappsandbox/activities/ThreadTest.java:10:	protectedMethodCommentRequirement Required

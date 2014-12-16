@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yuseok.rxcycleappsandbox"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ThreadTest"
+            android:label="@string/title_activity_thread_test" >
+        </activity>
+        <activity
+            android:name=".activities.AsyncTaskTest"
+            android:label="@string/title_activity_async_task_test" >
+        </activity>
+        <activity
+            android:name=".activities.GraphTest"
+            android:label="@string/title_activity_graph_test" >
+        </activity>
+        <activity
+            android:name=".activities.RunOnUIThreadTest"
+            android:label="@string/title_activity_run_on_uithread_test" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDNeVaWhVE4DMVvniVoUGLhmyRUtvwCAB8" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.SoundFXTest"
+            android:label="@string/title_activity_sound_fxtest" >
+        </activity>
+        <activity
+            android:name=".activities.FullGoogleMapUsage"
+            android:label="@string/title_activity_full_google_map_usage" >
+        </activity>
+        <activity
+            android:name=".activities.JQueryTestOne"
+            android:label="@string/title_activity_jquery_test_one" >
+        </activity>
+        <activity
+            android:name=".activities.JQueryTestTwo"
+            android:label="@string/title_activity_jquery_test_two"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".activities.CallBackTest"
+            android:label="@string/title_activity_call_back_test" >
+        </activity>
+        <activity
+            android:name=".activities.BluetoothTest"
+            android:label="@string/title_activity_bluetooth_test" >
+        </activity>
+        <activity
+            android:name=".activities.bluetooth.DeviceListActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
+        </activity>
+        <activity
+            android:name=".activities.BluetoothNewer"
+            android:label="@string/ble" >
+        </activity>
+        <activity
+            android:name=".activities.ExampleBT"
+            android:label="@string/title_activity_example_bt" >
+        </activity>
+        <activity
+            android:name=".activities.DownImage"
+            android:label="@string/title_activity_down_image" >
+        </activity>
+        <activity
+            android:name=".activities.AndroidCmmExample"
+            android:label="@string/title_activity_android_cmm_example" >
+        </activity>
+        <activity
+            android:name=".activities.IntentTest"
+            android:label="@string/title_activity_intent_test" >
+        </activity>
+        <activity
+            android:name="yuseok.rxcycleappsandbox.activities.BikeController"
+            android:label="@string/title_activity_bike_controller" >
+        </activity>
+    </application>
+
+</manifest>
