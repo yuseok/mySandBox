@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
 	ListView mListView;
 	private final String[] mListData = { "ThreadTest", "AsyncTaskTest", "GraphTest", "RunOnUIThreadTest", "SoundFXTest", "GoogleMapFullyUsage", "JQueryTestOne", "JQueryTestTwo",
-			"CallBackTest", "BluetoothTest", "BluetoothNewer", "ExampleBT", "DownImage", "AndroidCmmExample","IntentTest", "BikeController", "WidgetLibrary" };
+			"CallBackTest", "BluetoothTest", "BluetoothNewer", "ExampleBT", "DownImage", "AndroidCmmExample", "IntentTest", "BikeController", "WidgetLibrary", "WebViewMaster" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -115,7 +115,7 @@
             android:label="@string/title_activity_widget_library" >
         </activity>
         <activity
-            android:name=".WebViewMaster"
+            android:name="yuseok.rxcycleappsandbox.activities.WebViewMaster"
             android:label="@string/title_activity_web_view_master" >
         </activity>
     </application>
