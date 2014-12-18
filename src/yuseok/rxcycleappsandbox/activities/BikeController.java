@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.UUID;
 
 import yuseok.rxcycleappsandbox.R;
+import yuseok.rxcycleappsandbox.activities.calculatevalues.CalculatorVer1;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -19,14 +20,27 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class BikeController extends Activity {
 
+	private final String WORKOUT_START = "H1S";
+	private final String WORKOUT_STOP = "H1E";
+	private CalculatorVer1 calculator;
+
+	private Button startWorkButton;
 	private TextView myLabel;
 	private EditText myTextbox;
-	private SeekBar mSeek;
+	private TextView myResult;
+	private SeekBar mSeekPower;
+	private SeekBar mSeekWind;
+	private TextView mFrontWheel;
+	private TextView mRearWheel;
+	private TextView mFrontGear;
+	private TextView mRearGear;
+	volatile boolean isStartWorkout = false;
 
 	public BluetoothAdapter mBluetoothAdapter;
 	protected BluetoothSocket mSocket;
@@ -38,9 +52,6 @@ public class BikeController extends Activity {
 	private Thread workerThread;
 	volatile boolean stopWorker;
 
-	private byte[] readBuffer;
-	private int readBufferPosition;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,26 +60,86 @@ public class BikeController extends Activity {
 		Button openButton = (Button) findViewById(R.id.open);
 		Button sendButton = (Button) findViewById(R.id.send);
 		Button closeButton = (Button) findViewById(R.id.close);
+		startWorkButton = (Button) findViewById(R.id.work_start);
 
 		myLabel = (TextView) findViewById(R.id.label);
 		myTextbox = (EditText) findViewById(R.id.entry);
-		mSeek = (SeekBar) findViewById(R.id.seekBar1);
+		myResult = (TextView) findViewById(R.id.bt_receive);
+
+		mFrontWheel = (TextView) findViewById(R.id.front_wheel);
+		mRearWheel = (TextView) findViewById(R.id.rear_wheel);
+		mFrontGear = (TextView) findViewById(R.id.front_gear);
+		mRearGear = (TextView) findViewById(R.id.rear_gear);
+
+		mSeekPower = (SeekBar) findViewById(R.id.seekBar1);
+		mSeekWind = (SeekBar) findViewById(R.id.seekBar2);
 
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 		if (mBluetoothAdapter == null) {
 			myLabel.setText("블루투스 모듈 지원이 안되요..");
-			mSeek.setActivated(false);
+			mSeekPower.setActivated(false);
+			mSeekWind.setActivated(false);
 			openButton.setActivated(false);
 			sendButton.setActivated(false);
 			closeButton.setActivated(false);
+			startWorkButton.setActivated(false);
 			return;
 		}
-
+		
+		calculator = CalculatorVer1.getInstance();
+		
 		openButton.setOnClickListener(listener);
 		sendButton.setOnClickListener(listener);
 		closeButton.setOnClickListener(listener);
+		startWorkButton.setOnClickListener(listener);
+		mSeekPower.setOnSeekBarChangeListener(seeklistener);
+		mSeekWind.setOnSeekBarChangeListener(seeklistener);
 
 	}
+
+	OnSeekBarChangeListener seeklistener = new OnSeekBarChangeListener() {
+
+		@Override
+		public void onStopTrackingTouch(SeekBar seekBar) {
+
+		}
+
+		@Override
+		public void onStartTrackingTouch(SeekBar seekBar) {
+
+		}
+
+		@Override
+		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+			switch (seekBar.getId()) {
+			case R.id.seekBar1:
+				try {
+					if (progress < 10) {
+						sendData("P300" + progress);
+					} else if (progress > 9 && progress < 100) {
+						sendData("P30" + progress);
+					} else if (progress > 99) {
+						sendData("P3" + progress);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				break;
+			case R.id.seekBar2:
+				try {
+					if (progress < 10) {
+						sendData("F20" + progress);
+					} else {
+						sendData("F2" + progress);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				break;
+			}
+
+		}
+	};
 
 	OnClickListener listener = new OnClickListener() {
 
@@ -85,7 +156,7 @@ public class BikeController extends Activity {
 				break;
 			case R.id.send:
 				try {
-					sendData();
+					sendData(myTextbox.getText().toString());
 				} catch (Exception e) {
 					Log.e("bikeController", "sendData", e);
 					Toast.makeText(BikeController.this, "예외가 발생했습니다..", Toast.LENGTH_SHORT).show();
@@ -96,6 +167,22 @@ public class BikeController extends Activity {
 					closeBT();
 				} catch (Exception e) {
 					Log.e("bikeController", "closeBT", e);
+					Toast.makeText(BikeController.this, "예외가 발생했습니다..", Toast.LENGTH_SHORT).show();
+				}
+				break;
+			case R.id.work_start:
+				try {
+					if (!isStartWorkout) {
+						sendData(WORKOUT_START);
+						isStartWorkout = true;
+						startWorkButton.setText("운동 끝내기");
+					} else {
+						sendData(WORKOUT_STOP);
+						isStartWorkout = false;
+						startWorkButton.setText("운동 시작");
+					}
+				} catch (Exception e) {
+					Log.e("bikeController", "work_start", e);
 					Toast.makeText(BikeController.this, "예외가 발생했습니다..", Toast.LENGTH_SHORT).show();
 				}
 				break;
@@ -146,51 +233,45 @@ public class BikeController extends Activity {
 				mSocket.connect();
 				mOuput = mSocket.getOutputStream();
 				mInput = mSocket.getInputStream();
-
 				stopWorker = false;
-				readBufferPosition = 0;
-				readBuffer = new byte[1024];
 
 			} catch (IOException e) {
+				Log.e("bikeController", "Writer", e);
 				myLabel.post(new Runnable() {
 
 					@Override
 					public void run() {
 						myLabel.setText("예외가 발생..");
-
 					}
 				});
 				stopWorker = true;
 			}
-
 			while (!stopWorker) {
 				try {
 					int bytesAvailable = mInput.available();
 					if (bytesAvailable > 0) {
 						byte[] packetBytes = new byte[bytesAvailable];
 						mInput.read(packetBytes);
-						for (int i = 0; i < bytesAvailable; i++) {
-							byte b = packetBytes[i];
-							if (b == delimiter) {
-								byte[] encodedBytes = new byte[readBufferPosition];
-								System.arraycopy(readBuffer, 0, encodedBytes, 0, encodedBytes.length);
-								final String data = new String(encodedBytes, "US-ASCII");
-								readBufferPosition = 0;
+						final String data = checkData(new String(packetBytes, "US-ASCII"));
 
-								myLabel.post(new Runnable() {
-
-									@Override
-									public void run() {
-										myLabel.setText(data);
-									}
-								});
-							} else {
-								readBuffer[readBufferPosition] = b;
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								myResult.append(data);
+								if (!data.equals("R")) {
+									if (data.length() != 9)
+										return;
+									mFrontWheel.setText(data.substring(2, 4) + " rpm");
+									mRearWheel.setText(data.substring(2, 4) + " rpm");
+									mFrontGear.setText(data.substring(6, 7));
+									mRearGear.setText(data.substring(7, 8));
+								}
 							}
-						}
+						});
+
 					} else {
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(200);
 						} catch (InterruptedException e) {
 							stopWorker = true;
 						}
@@ -202,14 +283,10 @@ public class BikeController extends Activity {
 		}
 	}
 
-	void sendData() throws IOException {
-		String msg = myTextbox.getText().toString();
+	void sendData(String msg) throws IOException {
 		msg += "\n";
-
-		mOuput.write(msg.getBytes());
-
-		myLabel.setText("Data Sent");
-
+		mOuput.write(msg.getBytes("US-ASCII"));
+		myLabel.setText(msg + "Sent");
 	}
 
 	void closeBT() throws IOException {
@@ -219,4 +296,33 @@ public class BikeController extends Activity {
 		mSocket.close();
 		myLabel.setText("Bluetooth Closed");
 	}
+
+	// CRC 부분
+	synchronized String checkData(String data) {
+		final String str;
+		final int len = data.length();
+
+		Log.v("Bluetooth Data", data);
+		switch (data.charAt(0)) {
+		case 'D':
+			str = len == 9 ? data : "R";
+			break;
+		case 'P':
+			str = len == 6 ? data : "R";
+			break;
+		case 'H':
+			str = len == 4 ? data : "R";
+			break;
+		case 'F':
+			str = len == 5 ? data : "R";
+			break;
+		case 'B':
+			str = len == 5 ? data : "R";
+			break;
+		default:
+			str = "R";
+		}
+		return str;
+	}
+
 }

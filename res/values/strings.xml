@@ -45,5 +45,7 @@
     <string name="title_activity_android_cmm_example">AndroidCmmExample</string>
     <string name="title_activity_intent_test">IntentTest</string>
     <string name="title_activity_bike_controller">BikeController</string>
+    <string name="title_activity_widget_library">WidgetLibrary</string>
+    <string name="title_activity_web_view_master">WebViewMaster</string>
 
 </resources>

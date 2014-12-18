@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
 	ListView mListView;
 	private final String[] mListData = { "ThreadTest", "AsyncTaskTest", "GraphTest", "RunOnUIThreadTest", "SoundFXTest", "GoogleMapFullyUsage", "JQueryTestOne", "JQueryTestTwo",
-			"CallBackTest", "BluetoothTest", "BluetoothNewer", "ExampleBT", "DownImage", "AndroidCmmExample","IntentTest", "BikeController" };
+			"CallBackTest", "BluetoothTest", "BluetoothNewer", "ExampleBT", "DownImage", "AndroidCmmExample","IntentTest", "BikeController", "WidgetLibrary" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +42,5 @@ public class MainActivity extends Activity {
 
 			}
 		});
-		getPackageInfo();
-	}
-	
-	private void getPackageInfo(){
-		Package.getPackages();
 	}
 }

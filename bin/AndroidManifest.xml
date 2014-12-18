@@ -107,8 +107,16 @@
             android:label="@string/title_activity_intent_test" >
         </activity>
         <activity
-            android:name="yuseok.rxcycleappsandbox.activities.BikeController"
+            android:name=".activities.BikeController"
             android:label="@string/title_activity_bike_controller" >
+        </activity>
+        <activity
+            android:name=".activities.WidgetLibrary"
+            android:label="@string/title_activity_widget_library" >
+        </activity>
+        <activity
+            android:name=".WebViewMaster"
+            android:label="@string/title_activity_web_view_master" >
         </activity>
     </application>
 
